@@ -8,7 +8,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <style>
+         pre {overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+         }
+      </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -18,6 +30,38 @@
             your experience.
             </p>
         <![endif]-->
+
+        <div id="instructions">
+            <div class="container" style="text-align: center; max-width: 800px; margin-top: 18rem; margin-bottom: 3rem;">
+                <h2 class="title">Static Dashboard Rotation</h2>
+                <img src="rotato.gif"/>
+            </div>
+            <div class="container">
+
+                <p>
+                    Rotato is a no-code, low-config way to rotate webpages in a kiosk, written to cycle multiple DataDog dashboards on one <a href="https://github.com/balenalabs/balena-dash">balena-dash</a>.
+                </p>
+
+                <p>
+                    Configure using url parameters: <code>delay</code> to set the time in seconds
+                    between frames, and any number of <code>url</code> as optionally url-encoded pages to show.
+                    The pages are loaded in iframes and toggled in and out, avoiding reloads.
+                    Note that many sites will refuse to load in an iframe.
+                </p>
+
+                <div>
+                    Example, rapidly switching between two urls:
+                </div>
+                <pre><code style="white-space: pre-wrap">
+https://revan.io/rotato/?delay=3&url=https%3A%2F%2Ftwitframe.com%2Fshow%3Furl%3Dhttps%253A%252F%252Ftwitter.com%252Fjack%252Fstatus%252F20&url=https%3A%2F%2Ftwitframe.com%2Fshow%3Furl%3Dhttps%253A%252F%252Ftwitter.com%252Fdril%252Fstatus%252F922321981
+                </code></pre>
+            </div>
+
+            <div class="container" style="text-align: center; max-width: 800px">
+                <iframe src="https://ghbtns.com/github-btn.html?user=revan&repo=rotato&type=star&count=true"
+                        frameborder="0" scrolling="0" width="80" height="20" title="GitHub"></iframe>
+            </div>
+        </div>
 
         <div id="frames"/>
 
